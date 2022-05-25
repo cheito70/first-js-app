@@ -1,6 +1,6 @@
 # first-js-app
 
-Project Description
+##Project Description
 
 Objective:
 To build a small web application with HTML, CSS, and JavaScript that loads
