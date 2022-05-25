@@ -11,4 +11,4 @@ let pokemonlist = [{name: "Charizard", height: "5' 7\"", type: ["Fire", "Flying"
 {name: "Gengar", height: "4' 11\"", type: ["Ghost", "Poison"]},
 {name: "Gyarados", height: "21' 4\"", type: ["Water", "Flying"]},
 {name: "Dragonite", height: "7' 3\"", type: ["Dragon", "Flying"]}
-]
+];
