@@ -12,3 +12,7 @@ let pokemonList = [
     {name: "Gyarados", height: 21.4, type: ["Water", "Flying"]},
     {name: "Dragonite", height: 7.3, type: ["Dragon", "Flying"]}
 ];
+
+for (let i = 0; i < pokemonList.length; i++){
+      document.write(pokemonList[1].name + " " + pokemonList[1].height + "<br>");
+}
