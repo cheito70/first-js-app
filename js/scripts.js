@@ -16,6 +16,7 @@ let pokemonList = [
 for (let i = 0; i < pokemonList.length; i++){
       document.write(pokemonList[i].name + " " + " height: " + pokemonList[i].height + "<br>");
 }
+//Cannot get the conditional to work
 let condition = pokemonList.height > 6;
 if(condition){
   document.write(pokemonList[i].name + ' Wow, that is Huge!');
