@@ -22,5 +22,8 @@ let pokemonList = [
 } */
 
 pokemonList.forEach(function(pokemon){
+  if(pokemon.height > 6){
+    document.write(pokemon.name + ' -Wow, that is huge!' + '<br>');}
+  else{
   document.write(pokemon.name + " " + pokemon.height + " " + '<br>' );
-});
+}});
