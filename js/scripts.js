@@ -13,10 +13,14 @@ let pokemonList = [
     {name: "Dragonite", height: 7.3, type: ["Dragon", "Flying"]}
 ];
 
-for (let i = 0; i < pokemonList.length; i++){
+/*for (let i = 0; i < pokemonList.length; i++){
   if(pokemonList[i].height >6) {
         document.write(pokemonList[i].name + " " + " height: " + pokemonList[i].height + ' - Wow, that is Huge!' + "<br>");
 } else {
   document.write(pokemonList[i].name + " " + " height: " + pokemonList[i].height + "<br>");
  }
-}
+} */
+
+pokemonList.forEach(function(pokemon){
+  document.write(pokemon.name + " " + pokemon.height + " " + '<br>' );
+});
