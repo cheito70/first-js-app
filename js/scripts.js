@@ -1,6 +1,7 @@
 /*Initial task of setting up the pokemonList objects. Used
 reference from pokemon.com pokedex for data.*/
-let pokemonList = [
+let pokemonRepository = (function () {
+ let pokemonList = [
     {name: "Charizard", height: 5.7, type: ["Fire", "Flying"]},
     {name: "Wartortle", height: 3.3, type: ["Water"]},
     {name: "Zubat", height: 2.7, type: ["Poison", "Flying"]},
@@ -13,7 +14,22 @@ let pokemonList = [
     {name: "Dragonite", height: 7.3, type: ["Dragon", "Flying"]}
 ];
 
-/*for (let i = 0; i < pokemonList.length; i++){
+
+ function add(pokemon) {
+   pokemonList.push(pokemon);
+ }
+  function getAll() {
+    return pokemonList;
+  }
+  return {
+    add: add,
+    getAll: getAll
+  };
+
+})();
+
+/*Below is the for loop format
+for (let i = 0; i < pokemonList.length; i++){
   if(pokemonList[i].height >6) {
         document.write(pokemonList[i].name + " " + " height: " + pokemonList[i].height + ' - Wow, that is Huge!' + "<br>");
 } else {
