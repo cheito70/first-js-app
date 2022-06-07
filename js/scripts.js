@@ -28,18 +28,11 @@ let pokemonRepository = (function () {
 
 })();
 
-/*Below is the for loop format
-for (let i = 0; i < pokemonList.length; i++){
-  if(pokemonList[i].height >6) {
-        document.write(pokemonList[i].name + " " + " height: " + pokemonList[i].height + ' - Wow, that is Huge!' + "<br>");
-} else {
-  document.write(pokemonList[i].name + " " + " height: " + pokemonList[i].height + "<br>");
- }
-} */
+//Create and display the pokemonList via the getAll keys with forEach loop
+//outside of IIFE
 
-pokemonList.forEach(function(pokemon){
+pokemonRepository.getAll().forEach(function(pokemon){
   if(pokemon.height > 6){
-    document.write(pokemon.name + ' -Wow, that is huge!' + '<br>');}
-  else{
-  document.write(pokemon.name + " " + pokemon.height + " " + '<br>' );
-}});
+    document.write(pokemon.name + ' -Wow, that is huge!' + '<br>');} else{
+  document.write(pokemon.name + " " + pokemon.height + " " + '<br>' )}
+});
