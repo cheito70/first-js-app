@@ -14,8 +14,40 @@ let pokemonRepository = (function () {
     {name: "Dragonite", height: 7.3, type: ["Dragon", "Flying"]}
 ];
 
+function add(pokemon) {
 
- function add(pokemon) {
+     repository.push(pokemon);
+
+ }
+  function getAll() {
+    return repository;
+  }
+  function addListItem(pokemon){
+  let pokemonList = document.querySelector(".pokemon-list");
+  let listpokemon = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name;
+  button.classList.add("button-class");
+  listpokemon.appendChild(button);
+  pokemonList.appendChild(listpokemon);
+  }
+  return {
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem
+
+  };
+
+})();
+
+pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
+
+console.log(pokemonRepository.getAll());
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
+ /*function add(pokemon) {
    repository.push(pokemon);
  }
   function getAll() {
@@ -35,4 +67,4 @@ pokemonRepository.getAll().forEach(function(pokemon){
   if(pokemon.height > 6){
     document.write(pokemon.name + ' -Wow, that is huge!' + '<br>');} else{
   document.write(pokemon.name + " " + pokemon.height + " " + '<br>' )}
-});
+});*/
