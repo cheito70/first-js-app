@@ -1,7 +1,7 @@
 /*Initial task of setting up the pokemonList objects. Used
 reference from pokemon.com pokedex for data.*/
 let pokemonRepository = (function () {
- let pokemonList = [
+ let repository = [
     {name: "Charizard", height: 5.7, type: ["Fire", "Flying"]},
     {name: "Wartortle", height: 3.3, type: ["Water"]},
     {name: "Zubat", height: 2.7, type: ["Poison", "Flying"]},
@@ -16,10 +16,10 @@ let pokemonRepository = (function () {
 
 
  function add(pokemon) {
-   pokemonList.push(pokemon);
+   repository.push(pokemon);
  }
   function getAll() {
-    return pokemonList;
+    return repository;
   }
   return {
     add: add,
