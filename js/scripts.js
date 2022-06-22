@@ -47,6 +47,10 @@ function eventListener(button, pokemon) {
   });
 }
 
+function showDetails(pokemon) {
+  console.log(pokemon);
+}
+
 
   return {
     add: add,
