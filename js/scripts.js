@@ -19,6 +19,8 @@ function add(pokemon) {
   function getAll() {
     return pokemonList;
   }
+
+  //This function creates button and list elements by using the .pokemon-list button class.
   function addListItem(pokemon){
   let pokemonList = document.querySelector(".pokemon-list");
   let listpokemon = document.createElement("li");
@@ -27,8 +29,9 @@ function add(pokemon) {
   button.classList.add("button-class");
   listpokemon.appendChild(button);
   pokemonList.appendChild(listpokemon);
-  eventListener(button, pokemon);
-  showDetails(pokemon);
+  button.addEventListener("click", function(event){
+      showDetails(pokemon);
+  });
   }
 
 //This function calls the showDetails function when button is clicked
