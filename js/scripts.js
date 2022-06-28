@@ -1,18 +1,9 @@
-/*Initial task of setting up the pokemonList objects. Used
-reference from pokemon.com pokedex for data.*/
+//Emptied out array and created apiUrl variable to establish url from pokedex
+
 let pokemonRepository = (function () {
- let repository = [
-    {name: "Charizard", height: 5.7, type: ["Fire", "Flying"]},
-    {name: "Wartortle", height: 3.3, type: ["Water"]},
-    {name: "Zubat", height: 2.7, type: ["Poison", "Flying"]},
-    {name: "Machop", height: 2.7, type: "Fighting"},
-    {name: "Venusau", height: 6.7, type: ["Grass", "Poison"]},
-    {name: "Charmeleon", height: 3.7, type: "Fire"},
-    {name: "Drowzee", height: 3.3, type: "Psychic"},
-    {name: "Gengar", height: 4.11, type: ["Ghost", "Poison"]},
-    {name: "Gyarados", height: 21.4, type: ["Water", "Flying"]},
-    {name: "Dragonite", height: 7.3, type: ["Dragon", "Flying"]}
-];
+ let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1154';
+
 
 function add(pokemon) {
     if (
