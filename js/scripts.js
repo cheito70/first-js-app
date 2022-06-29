@@ -34,17 +34,6 @@ let pokemonRepository = (function () {
     });
   }
 
-  /*This function calls the showDetails function when button is clicked
-  It was incorporated into the "function addListItem" block above
-  function eventListener(button, pokemon) {
-  button.addEventListener("click", function(){
-  showDetails(pokemon);
-});
-}
-
-function showDetails(pokemon) {
-console.log(pokemon);
-}*/
 
 //This function (loadList) fetches the data in json form from the api
 //and parses it. It contains the response param, the forEach loop function
