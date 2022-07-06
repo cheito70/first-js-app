@@ -4,20 +4,13 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1154';
 
-
-  function add(pokemon) {
-    if (
-      typeof pokemon === "object" &&
-      "name" in pokemon
-
-    ) {
-      pokemonList.push(pokemon);
-    } else {
-      console.log("pokemon is not correct");
-    }
-  }
-  function getAll() {
+//Retrieve all pokemonList
+function getAll() {
     return pokemonList;
+  }
+
+  function add(item) {
+      pokemonList.push(item);
   }
 
   //This function creates button and list elements by using the .pokemon-list button class.
@@ -27,8 +20,10 @@ let pokemonRepository = (function () {
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add("button-class");
+    //Append elements
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+    //On click, showDetails
     button.addEventListener("click", function(event){
       showDetails(pokemon);
     });
@@ -57,24 +52,31 @@ function loadList() {
 
 //loadDetails function adds item info and image
 function loadDetails(item){
+
   let url = item.detailsUrl;
   return fetch(url).then(function (response) {
     return response.json();
   }).then(function(details){
+    //Now add details to item
     item.imageUrl = details.sprites.front_default;
     item.height = details.height;
     item.types = details.types;
+
   }).catch(function(e){
     console.error(e);
   })
 }
 
 //Function logs the loadDetails result in the console
-function showDetails(item) {
-  pokemonRepository.loadDetails(item).then(function() {
-    console.log(item);
+function showDetails(pokemon) {
+  loadDetails(pokemon).then(function() {
+    //Show modal
+    showModal(pokemon);
   });
 }
+
+//modal
+
 
 return {
   add: add,
