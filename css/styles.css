@@ -101,6 +101,6 @@ html, body {
 }
 
 .modal p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
   text-transform: capitalize;
 }

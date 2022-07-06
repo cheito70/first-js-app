@@ -4,13 +4,13 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1154';
 
-//Retrieve all pokemonList
-function getAll() {
+  //Retrieve all pokemonList
+  function getAll() {
     return pokemonList;
   }
 
   function add(item) {
-      pokemonList.push(item);
+    pokemonList.push(item);
   }
 
   //This function creates button and list elements by using the .pokemon-list button class.
@@ -30,63 +30,63 @@ function getAll() {
   }
 
 
-//This function (loadList) fetches the data in json form from the api
-//and parses it. It contains the response param, the forEach loop function
-//as well as the .then and .catch callback functions.
-function loadList() {
-  return fetch(apiUrl).then(function(response) {
-    return response.json();
-  }).then(function(json) {
-    json.results.forEach(function(item) {
-      let pokemon = {
-        name: item.name,
-        detailsUrl: item.url
-      };
-      add(pokemon);
-      console.log(pokemon);
+  //This function (loadList) fetches the data in json form from the api
+  //and parses it. It contains the response param, the forEach loop function
+  //as well as the .then and .catch callback functions.
+  function loadList() {
+    return fetch(apiUrl).then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      json.results.forEach(function(item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+        console.log(pokemon);
+      });
+    }).catch (function(e) {
+      console.error(e);
     });
-  }).catch (function(e) {
-    console.error(e);
-  });
-}
+  }
 
-//loadDetails function adds item info and image
-function loadDetails(item){
+  //loadDetails function adds item info and image
+  function loadDetails(item){
 
-  let url = item.detailsUrl;
-  return fetch(url).then(function (response) {
-    return response.json();
-  }).then(function(details){
-    //Now add details to item
-    item.imageUrl = details.sprites.front_default;
-    item.height = details.height;
-    item.types = details.types;
+    let url = item.detailsUrl;
+    return fetch(url).then(function (response) {
+      return response.json();
+    }).then(function(details){
+      //Now add details to item
+      item.imageUrl = details.sprites.front_default;
+      item.height = details.height;
+      item.types = details.types;
 
-  }).catch(function(e){
-    console.error(e);
-  })
-}
+    }).catch(function(e){
+      console.error(e);
+    })
+  }
 
-//Function logs the loadDetails result in the console
-function showDetails(pokemon) {
-  loadDetails(pokemon).then(function() {
-    //Show modal
-    showModal(pokemon);
-  });
-}
+  //Function logs the loadDetails result in the console
+  function showDetails(pokemon) {
+    loadDetails(pokemon).then(function() {
+      //Show modal
+      showModal(pokemon);
+    });
+  }
 
-//The modal code will be here.
+  //The modal code will be here.
 
-function showDetails(pokemon) {
+  function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       //show Modal
       showModal(pokemon);
     });
   }
 
-//Modal
+  //Modal
 
-let modalContainer = document.querySelector('#modal-container');
+  let modalContainer = document.querySelector('#modal-container');
 
   function showModal(pokemon) {
 
@@ -154,41 +154,41 @@ let modalContainer = document.querySelector('#modal-container');
     }
   });
 
-    modalContainer.addEventListener('click', (e) => {
-      //Since this is also triggered when inside the modal
-      //We want it to close if user clicks on overlay
-      let target = e.target;
-      if (target === modalContainer){
-        hideModal();
-      }
-    });
-
-    //Swipe functions
-
-    let touchstartX = 0;
-    let touchendX = 0;
-
-    function swipe(pokemon) {
-      //Swipe left
-      if ((touchendX < (touchstartX+50)) && (pokemonList.indexOf(pokemon) < (pokemonList.length-1))) {
-        hideModal();
-        showDetails(pokemonList[pokemonList.indexOf(pokemon)-1]);
-        touchstartX = 0;
-        touchendX = 0;
-      }
+  modalContainer.addEventListener('click', (e) => {
+    //Since this is also triggered when inside the modal
+    //We want it to close if user clicks on overlay
+    let target = e.target;
+    if (target === modalContainer){
+      hideModal();
     }
+  });
+
+  //Swipe functions
+
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  function swipe(pokemon) {
+    //Swipe left
+    if ((touchendX < (touchstartX+50)) && (pokemonList.indexOf(pokemon) < (pokemonList.length-1))) {
+      hideModal();
+      showDetails(pokemonList[pokemonList.indexOf(pokemon)-1]);
+      touchstartX = 0;
+      touchendX = 0;
+    }
+  }
 
 
 
-return {
-  add: add,
-  getAll: getAll,
-  addListItem: addListItem,
-  loadList: loadList,
-  loadDetails: loadDetails,
-  showDetails: showDetails
+  return {
+    add: add,
+    getAll: getAll,
+    addListItem: addListItem,
+    loadList: loadList,
+    loadDetails: loadDetails,
+    showDetails: showDetails
 
-};
+  };
 
 })();
 
