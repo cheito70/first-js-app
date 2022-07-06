@@ -75,7 +75,14 @@ function showDetails(pokemon) {
   });
 }
 
-//modal
+//The modal code will be here.
+
+function showDetails(pokemon) {
+    loadDetails(pokemon).then(function () {
+      //show Modal
+      showModal(pokemon);
+    });
+  }
 
 
 return {
