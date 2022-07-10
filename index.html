@@ -13,16 +13,16 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html"><img src="img/pokeball.png" width="88" height="50" alt="">
         Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#about-modal">About <span class="sr-only">(current)</span></a>
-          </li>
-          <!--<li class="nav-item">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#about-modal">About <span class="sr-only">(current)</span></a>
+            </li>
+            <!--<li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li> -->
         </ul>
@@ -36,11 +36,59 @@
   <main>
 
     <div>
-      <h1>Pokemon App</h1>
+      <h1>Pokefind App</h1>
       <ul class="pokemon-list"></ul>
     </div>
-    <!-- Modal Container -->
+
     <div id="modal-container" pointer-action = "none"></div>
+
+    <!-- About Modal -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">About Pokefind</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="about-modal-body">
+            <p>
+              Our Pokefind App is here to help you easily find all of the data and information
+              regarding your desired Pokemon or any Pokemon listed on the official Pokemon Dex.<br />
+              Click on any of the Pokemon's name on the list, or use the search bar to look for
+              your specific Pokemon!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal describing each pokemon -->
+<div class="modal fade" id="poke-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" id="poke-modal-header">
+            <h5 class="modal-title" id="poke-modal-title">Pokemon Name</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="poke-modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <strong>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
