@@ -8,6 +8,21 @@ let pokemonRepository = (function () {
   let search = document.getElementById("poke-search");
   search.addEventListener("input", searchList);
 
+  function searchList() {
+    let searchInput = document.getElementById("poke-search").value;
+    searchInput = searchInput.toLowerCase();
+    let listItem = $("li");
+    listItem.each(function () {
+      let item = $(this);
+      let name = item.text();
+      if (name.includes(searchInput)) {
+        item.show();
+      } else {
+        item.hide();
+      }
+    });
+  }
+
   //Retrieve all pokemonList
   function getAll() {
     return pokemonList;
