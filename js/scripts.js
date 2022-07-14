@@ -43,11 +43,15 @@ let pokemonRepository = (function () {
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     //On click, showDetails
-    button.addEventListener("click", function(event){
-      showDetails(pokemon);
-    });
+    clickEvent(button, pokemon);
+    
   }
 
+function clickEvent(button, pokemon) {
+  button.addEventListener("click", function() {
+    showDetails(pokemon);
+  });
+}
 
   //This function (loadList) fetches the data in json form from the api
   //and parses it. It contains the response param, the forEach loop function
