@@ -114,3 +114,11 @@ html, body {
 .modal h1 {
   text-transform: uppercase;
 }
+
+#poke-modal-body {
+  line-height: 10px;
+}
+#about-modal-body {
+  line-height: 30px;
+  text-align: center;
+}
