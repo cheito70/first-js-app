@@ -28,8 +28,8 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function add(item) {
-    pokemonList.push(item);
+  function add(pokemon) {
+    pokemonList.push(pokemon);
   }
 
   //This function creates button and list elements by using the .pokemon-list button class.
