@@ -147,7 +147,7 @@ function clickEvent(button, pokemon) {
     pokemonWeight.innerText = "Weight: " + pokemon.weight.toFixed(1) + " lbs";
 
     modalTitle.appendChild(pokemonName);
-    modalTitle.appendChild(pokemonID);
+    modalTitle.appendChild(pokemonId);
     modalBody.appendChild(pokemonSprite);
     modalBody.appendChild(pokemonType);
     modalBody.appendChild(pokemonHeight);

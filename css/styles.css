@@ -122,3 +122,8 @@ html, body {
   line-height: 30px;
   text-align: center;
 }
+
+.pokemon-sprite {
+  width: 30%;
+  margin-bottom: 20px;
+}
