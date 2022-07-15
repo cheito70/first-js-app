@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Quicksand', sans-serif;
 
 }
 
@@ -15,7 +16,13 @@ html, body {
   width: 100%;
 }
 
+h1 {
+  font: inherit;
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
 
+}
 
 .pokemon-list {
   list-style: none;
@@ -54,10 +61,18 @@ html, body {
 
 /*Modal*/
 
+.modal-content {
+  text-align: center;
+}
 
+#poke-modal-title {
+  text-align: center;
+}
 
 #poke-modal-body {
   line-height: 10px;
+  text-align: center;
+
 }
 #about-modal-body {
   line-height: 30px;
@@ -68,3 +83,6 @@ html, body {
   width: 30%;
   margin-bottom: 20px;
 }
+
+.pokemon-type {
+  text-transform: capitalize;

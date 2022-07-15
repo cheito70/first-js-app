@@ -86,7 +86,7 @@ function clickEvent(button, pokemon) {
       return response.json();
     }).then(function(details){
       //Now add details to item
-      item.imageUrl = details.front_default;
+      item.imageUrl = details.sprites.other["official-artwork"].front_default;
       item.id = details.id;
       item.feet = details.height;
       item.weight = details.weight;
