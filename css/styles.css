@@ -2,6 +2,9 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
 }
 
 html, body {
@@ -16,8 +19,14 @@ html, body {
 
 .pokemon-list {
   list-style: none;
+  text-align: center;
 }
 
+.pokemon-list-item {
+  list-style: none;
+  border: none;
+  background-color: #d7e4ef;
+}
 
 .button-class {
   background-color: #4caf50;
@@ -45,75 +54,7 @@ html, body {
 
 /*Modal*/
 
-#modal-container {
-  display: none;
-}
 
-#modal-container.is-visible {
-  /*Css for the container */
-  position: fixed;
-  padding: 20px;
-  border-radius: 25px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #bce0fb;
-
-  /*to show it above other content */
-  z-index: 999;
-
-  /* to allow scrolling if screen not high enough*/
-  overflow: auto;
-
-  /* this is used to center the modal*/
-  display: grid;
-  text-align: center;
-}
-
-.modal {
-  margin: auto;
-  border: 4px solid #FF5757;
-  border-radius: 25px;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 468px;
-  text-align: center;
-  touch-action: 'none';
-}
-
-.modal-close {
-  float: right;
-  margin-top: -25px;
-  margin-right: -25px;
-  cursor: pointer;
-  color: #FF5757;
-  border: 2px solid #FF5757;
-  border-radius: 50%;
-  background: #A7BEDB;
-  font-size: 31px;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 0px;
-  padding: 11px 3px;
-}
-
-.modal-close::before {
-  content: "X";
-}
-
-.modal p {
-  margin-bottom: 10px;
-  text-transform: capitalize;
-}
-
-.modal h1 {
-  text-transform: uppercase;
-}
 
 #poke-modal-body {
   line-height: 10px;

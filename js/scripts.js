@@ -40,7 +40,7 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name;
     button.classList.add("button-class");
 
-    listItem.classList.add("list-group-item");
+    listItem.classList.add("pokemon-list-item");
     button.setAttribute("data-target", "#poke-modal");
     button.setAttribute("data-toggle", "modal");
 
@@ -113,10 +113,6 @@ function clickEvent(button, pokemon) {
   //The modal code will be here.
 
 
-
-  //Modal
-
-  //let modalContainer = document.querySelector('#modal-container');
 
   function showModal(pokemon) {
 
