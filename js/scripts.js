@@ -32,15 +32,15 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
-  //This function creates button and list elements by using the .pokemon-list button class.
+  //This function creates button and list elements by using the .list-group button class.
   function addListItem(pokemon){
-    let pokemonList = document.querySelector(".pokemon-list");
+    let pokemonList = document.querySelector(".list-group");
     let listItem = document.createElement("li");
     let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add("button-class");
+    button.classList.add("btn". "btn-custom");
 
-    listItem.classList.add("pokemon-list-item");
+    listItem.classList.add("list-group-item");
     button.setAttribute("data-target", "#poke-modal");
     button.setAttribute("data-toggle", "modal");
 
