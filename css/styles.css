@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-
+  
 }
 
 html, body {
@@ -34,6 +34,11 @@ h1 {
   border: none;
   background-color: #d7e4ef;
 }
+
+.page-container{
+  margin-top: 50px;
+}
+
 
 .btn-custom {
   background-color: #4caf50;
