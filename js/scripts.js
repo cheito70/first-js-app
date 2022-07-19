@@ -41,7 +41,7 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name;
     button.classList.add("btn", "btn-custom");
 
-    listItem.classList.add("list-group-item");
+    listItem.classList.add("list-group-item", "col-sm-6", "col-md-4", "col-lg-3");
     button.setAttribute("data-target", "#poke-modal");
     button.setAttribute("data-toggle", "modal");
 
