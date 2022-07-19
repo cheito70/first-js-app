@@ -2,7 +2,7 @@
 
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=1154";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=500";
 
 //Search code
   let search = document.getElementById("poke-search");
