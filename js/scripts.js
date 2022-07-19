@@ -152,38 +152,7 @@ function clickEvent(button, pokemon) {
 
   }
 
-/*  function hideModal(){
-    modalContainer.classList.remove('is-visible');
-  }
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
-    }
-  });
-
-  modalContainer.addEventListener('click', (e) => {
-    //Since this is also triggered when inside the modal
-    //We want it to close if user clicks on overlay
-    let target = e.target;
-    if (target === modalContainer){
-      hideModal();
-    }
-  });
-
-  //Swipe functions
-
-  let touchstartX = 0;
-  let touchendX = 0;
-
-  function swipe(pokemon) {
-    //Swipe left
-    if ((touchendX < (touchstartX+50)) && (pokemonList.indexOf(pokemon) < (pokemonList.length-1))) {
-      hideModal();
-      showDetails(pokemonList[pokemonList.indexOf(pokemon)-1]);
-      touchstartX = 0;
-      touchendX = 0;
-    }*/
 
 
 
