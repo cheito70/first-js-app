@@ -39,56 +39,57 @@
       <h1>Pokefind App</h1>
 
     </div>
+    <div class="container page-container" >
+      <ul class="list-group row mt-9 pl-6"></ul>
+      <!--<div id="modal-container" pointer-action = "none"></div>
 
-    <!--<div id="modal-container" pointer-action = "none"></div>
+      <!- About Modal -->
+      <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">About Pokefind</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="about-modal-body">
+              <p>
+                Our Pokefind App is here to help you easily find all of the data and information
+                regarding your desired Pokemon or any Pokemon listed on the official Pokemon Dex.<br />
+                Click on any of the Pokemon's name on the list, or use the search bar to look for
+                your specific Pokemon!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">Close</button>
 
-    <!- About Modal -->
-    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">About Pokefind</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            </div>
           </div>
-          <div class="modal-body" id="about-modal-body">
-            <p>
-              Our Pokefind App is here to help you easily find all of the data and information
-              regarding your desired Pokemon or any Pokemon listed on the official Pokemon Dex.<br />
-              Click on any of the Pokemon's name on the list, or use the search bar to look for
-              your specific Pokemon!
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">Close</button>
+        </div>
+      </div>
 
+      <!-- Modal describing each pokemon -->
+      <div class="modal fade " id="poke-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" id="poke-modal-header">
+              <h5 class="modal-title" id="poke-modal-title">Pokemon Name</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="poke-modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-<!-- Modal describing each pokemon -->
-<div class="modal fade " id="poke-modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header" id="poke-modal-header">
-            <h5 class="modal-title" id="poke-modal-title">Pokemon Name</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="poke-modal-body">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ul class="list-group"></ul>
 
     <strong>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
