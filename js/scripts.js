@@ -153,10 +153,6 @@ function clickEvent(button, pokemon) {
   }
 
 
-
-
-
-
   return {
     add: add,
     getAll: getAll,
