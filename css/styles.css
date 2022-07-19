@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  
+
 }
 
 html, body {
@@ -52,7 +52,7 @@ h1 {
   display: inline-block;
   font-size: 16px;
   margin: 6px 2px;
-  -webkit-transition-duration: 0.4s;
+  -webkit-transition-duration: 1s;
   transition-duration:  2s;
   cursor:  pointer;
   background-color: white;
@@ -93,3 +93,4 @@ h1 {
 
 .pokemon-type {
   text-transform: capitalize;
+}
