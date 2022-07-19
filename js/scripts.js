@@ -95,8 +95,7 @@ function clickEvent(button, pokemon) {
       let types = [];
       details.types.forEach((item) => types.push(item.type.name));
       item.types = types;
-      /*item.height = details.height;
-      item.types = details.types;*/
+
 
     }).catch(function(e){
       console.error(e);
@@ -113,8 +112,6 @@ function clickEvent(button, pokemon) {
 
   //The modal code will be here.
 
-
-
   function showModal(pokemon) {
 
     let modalBody = document.querySelector("#poke-modal-body");
@@ -126,8 +123,8 @@ function clickEvent(button, pokemon) {
     let pokemonName = document.createElement("h1");
     pokemonName.innerText = pokemon.name;
 
-    let pokemonId = document.createElement("h2");
-    pokemonId.innerText = "#" + pokemon.id.toString().padStart(3, 0);
+  /*  let pokemonId = document.createElement("h2");
+    pokemonId.innerText = "#" + pokemon.id.toString().padStart(3, 0);*/
 
     let pokemonSprite = document.createElement("img");
     pokemonSprite.src = pokemon.imageUrl;
@@ -144,7 +141,7 @@ function clickEvent(button, pokemon) {
     pokemonWeight.innerText = "Weight: " + pokemon.weight.toFixed(1) + " lbs";
 
     modalTitle.appendChild(pokemonName);
-    modalTitle.appendChild(pokemonId);
+    //modalTitle.appendChild(pokemonId);
     modalBody.appendChild(pokemonSprite);
     modalBody.appendChild(pokemonType);
     modalBody.appendChild(pokemonHeight);
