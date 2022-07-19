@@ -2,17 +2,17 @@
 
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=1154';
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=1154";
 
 //Search code
-  let search = document.getElementById('poke-search');
-  search.addEventListener('input', searchList);
+  let search = document.getElementById("poke-search");
+  search.addEventListener("input", searchList);
 
   function searchList() {
-    let searchInput = document.getElementById('poke-search').value;
+    let searchInput = document.getElementById("poke-search").value;
     searchInput = searchInput.toLowerCase();
     /*global $, $*/
-    let listItem = $('li');
+    let listItem = $("li");
     listItem.each(function () {
       let item = $(this);
       let name = item.text();
@@ -35,15 +35,15 @@ let pokemonRepository = (function () {
 
   //This function creates button and list elements by using the .list-group button class.
   function addListItem(pokemon){
-    let pokemonList = document.querySelector('.list-group');
-    let listItem = document.createElement('li');
-    let button = document.createElement('button');
+    let pokemonList = document.querySelector(".list-group");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add('btn', 'btn-custom');
+    button.classList.add("btn", "btn-custom");
 
-    listItem.classList.add('list-group-item');
-    button.setAttribute('data-target', '#poke-modal');
-    button.setAttribute('data-toggle', 'modal');
+    listItem.classList.add("list-group-item");
+    button.setAttribute("data-target", "#poke-modal");
+    button.setAttribute("data-toggle", "modal");
 
     //Append elements
     listItem.appendChild(button);
@@ -54,7 +54,7 @@ let pokemonRepository = (function () {
   }
 
 function clickEvent(button, pokemon) {
-  button.addEventListener('click', function() {
+  button.addEventListener("click", function() {
     showDetails(pokemon);
   });
 }
@@ -87,7 +87,7 @@ function clickEvent(button, pokemon) {
       return response.json();
     }).then(function(details){
       //Now add details to item
-      item.imageUrl = details.sprites.other['official-artwork'].front_default;
+      item.imageUrl = details.sprites.other["official-artwork"].front_default;
       item.id = details.id;
       item.feet = details.height;
       item.weight = details.weight;
@@ -117,31 +117,31 @@ function clickEvent(button, pokemon) {
 
   function showModal(pokemon) {
 
-    let modalBody = document.querySelector('#poke-modal-body');
-    let modalTitle = document.querySelector('#poke-modal-title');
+    let modalBody = document.querySelector("#poke-modal-body");
+    let modalTitle = document.querySelector("#poke-modal-title");
 
-    modalTitle.innerHTML = '';
-    modalBody.innerHTML = '';
+    modalTitle.innerHTML = "";
+    modalBody.innerHTML = "";
 
-    let pokemonName = document.createElement('h1');
+    let pokemonName = document.createElement("h1");
     pokemonName.innerText = pokemon.name;
 
-    let pokemonId = document.createElement('h2');
-    pokemonId.innerText = '#' + pokemon.id.toString().padStart(3, 0);
+    let pokemonId = document.createElement("h2");
+    pokemonId.innerText = "#" + pokemon.id.toString().padStart(3, 0);
 
-    let pokemonSprite = document.createElement('img');
+    let pokemonSprite = document.createElement("img");
     pokemonSprite.src = pokemon.imageUrl;
-    pokemonSprite.classList.add('pokemon-sprite');
+    pokemonSprite.classList.add("pokemon-sprite");
 
-    let pokemonType = document.createElement('p');
-    pokemonType.innerText = 'Type: ' + pokemon.types.join(', ');
-    pokemonType.classList.add('pokemon-type');
+    let pokemonType = document.createElement("p");
+    pokemonType.innerText = "Type: " + pokemon.types.join(", ");
+    pokemonType.classList.add("pokemon-type");
 
-    let pokemonHeight = document.createElement('p');
-    pokemonHeight.innerText = 'Height: ' + pokemon.feet + '\' ';
+    let pokemonHeight = document.createElement("p");
+    pokemonHeight.innerText = "Height: " + pokemon.feet + "' ";
 
-    let pokemonWeight = document.createElement('p');
-    pokemonWeight.innerText = 'Weight: ' + pokemon.weight.toFixed(1) + ' lbs';
+    let pokemonWeight = document.createElement("p");
+    pokemonWeight.innerText = "Weight: " + pokemon.weight.toFixed(1) + " lbs";
 
     modalTitle.appendChild(pokemonName);
     modalTitle.appendChild(pokemonId);
